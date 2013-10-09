@@ -1,0 +1,50 @@
+@import "../shared/_bootstrap"
+
+// nib's global reset
+// http://visionmedia.github.com/nib/
+global-reset()
+
+body
+	overflow: hidden
+
+	#nav
+		absolute  : top left
+		width     : 100%
+		height    : 60px
+		background: #fff
+		z-index   : 1
+
+		.logo
+			absolute: top 18px left 30px
+			height  : 24px
+
+		ul
+			width     : 100%
+			text-align: center
+
+			li
+				font-size: 22px
+				display  : inline-block
+				margin   : 20px 40px
+				cursor   : pointer
+				opacity  : 0
+
+				transition-duration: 0.5s
+
+				&.film:hover
+					color: #bcbdc0 !important
+
+				&.research:hover
+					color: #b1d8aa !important
+
+				&.contact:hover
+					color: #b6e1e0 !important
+
+	#container
+		position: relative
+
+		#film, #research, #contact
+			absolute: top left
+			width   : 100%
+			height  : 100%
+	
