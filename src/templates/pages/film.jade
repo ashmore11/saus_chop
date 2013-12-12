@@ -1,10 +1,23 @@
 #film
 
-	.wrapper
+	.wrapper._passion
 
-		h1.title._passion
+		h1.title
 			| We make music <br> videos and film. <br> We are Saus+Chop.
 
 		ul.content
-			li.box
-			li.box
+			li.box.first
+				.overlay
+				p.title LIAM BAILEY
+				.circle
+					p.play PLAY
+			li.box.second
+				.overlay
+				p.title EXAMINE <br> <span>coming soon</span>
+
+	.player
+		iframe(
+			src="http://player.vimeo.com/video/45704286?api=1&amp;player_id=player1",
+			frameborder="0",
+			id="player1"
+		)

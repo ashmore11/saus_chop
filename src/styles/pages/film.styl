@@ -1,6 +1,23 @@
 #film
 	background: #e7e7e8
 
+	.player
+		absolute  : top left
+		width     : 100%
+		height    : 100%
+		background: rgba(0,0,0,0.95)
+		display   : none
+
+		z-index   : 9999
+
+		iframe
+			absolute   : top 50% left 50%
+			width      : 700px
+			height     : 393px
+			margin-left: -350px
+			margin-top : -196px
+			display    : none
+
 	.wrapper
 		absolute: top 13% left 22%
 
@@ -14,8 +31,154 @@
 			margin-top: 100px
 
 			li.box
-				width : 400px
-				height: 250px
-				margin-right: 20px
-				display: inline-block
-				background: #bcbdc0
+				position      : relative
+				width         : 445px
+				height        : 295px
+				margin-right  : 15px
+				display       : inline-block
+				background    : #bcbdc0
+				font-smoothing: antialiased
+
+				.overlay
+					absolute  : top left
+					width     : 100%
+					height    : 100%
+					background: #fff
+					opacity   : 0.5
+					z-index   : 1
+
+					transition-duration: 0.5s
+
+				p.title
+					absolute   : top 45%
+					width      : 100%
+					text-align : center
+					font-size  : 50px
+					line-height: 22px
+					z-index    : 2
+
+					transition-duration: 0.5s
+
+					span
+						font-size  :  22px
+						margin-left: -68px
+
+				.circle
+					border-radius: 999px
+					absolute     : top 50% left 50%
+					width        : 140px
+					height       : 140px
+					margin-left  : -70px
+					margin-top   : -70px
+					background   : #b0add4
+					opacity      : 0
+					z-index      : 3
+
+					transition-duration: 0.5s
+
+					p.play
+						width     : 100%
+						text-align: center
+						font-size : 50px
+						margin-top: 46px
+
+
+			li.box.first
+				background: url('images/liam_baily_thumb.png') center center
+				background-size: cover
+
+				cursor: pointer
+
+				&:hover
+					.overlay
+						background: #d4d9ed
+						opacity   : 1
+
+					p.title
+						opacity: 0
+
+					.circle
+						opacity: 1
+
+						p.play
+							color: #d4d9ed
+
+				.circle p.play
+					color: #d4d9ed
+
+				p.title
+					color: #b0add4
+
+			li.box.second
+				background: url('images/examine_thumb.png') center center
+				background-size: cover
+
+				p.title
+					color: #fde1b2
+
+
+body.mobile
+
+	#film
+		background: white !important
+
+		.player
+			fixed: top left
+
+		.wrapper
+			absolute: top 220px left 0
+			width   : 100%
+
+			h1.title
+				margin-left: 80px
+
+			ul.content
+				margin-top: 50px
+				li.box
+					width       : 83%
+					height      : 500px
+					display     : block
+					margin      : 80px auto
+
+					p.title
+						font-size  : 130px
+						line-height: 42px
+
+						span
+							font-size  :  62px
+							margin-left: -168px
+
+
+body.tablet
+
+	#film
+
+		.wrapper
+			absolute: top 90px left 80px
+			width   : 100%
+
+			h1.title
+				font-size  : 80px
+				line-height: 70px
+
+			ul.content
+				margin-top: 30px
+
+				li.box
+					width       : 40%
+					height      : 250px
+
+					p.title
+						font-size  : 60px
+						line-height: 42px
+
+						span
+							font-size  :  32px
+							margin-left: -58px
+
+
+
+
+
+
+

@@ -56,6 +56,8 @@ setup
       'inflection': "#{theoricus}/vendors/inflection.js"
       'jquery': "#{theoricus}/vendors/jquery.js"
       'lodash': "#{theoricus}/vendors/lodash.js"
+      'froogaloop' : "#{theoricus}/vendors/froogaloop.js"
+      'fittext'    : "#{theoricus}/vendors/fittext.js"
 
       # app
       # 'app_vendor_name': 'vendors/app_vendor_name.js'
@@ -66,6 +68,7 @@ setup
           'history', 'inflection', 'jquery', 'json'
 
           # app
+          'froogaloop', 'fittext'
           # 'app_vendor'
         ]
 

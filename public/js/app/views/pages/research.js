@@ -18,11 +18,45 @@ define('app/views/pages/research', ['require', 'exports', 'module', 'styles/page
     }
 
     Research.prototype.after_render = function(data) {
+      var _this = this;
       $('#nav li').css({
         color: '#deedcf'
       });
-      return $('#nav li.research').css({
+      $('#nav li.research').css({
         color: '#b1d8aa'
+      });
+      $('#nav ul li').mouseenter(function(e) {
+        return $(e.currentTarget).css({
+          color: '#b1d8aa'
+        });
+      });
+      $('#nav ul li').mouseleave(function(e) {
+        $('#nav li').css({
+          color: '#deedcf'
+        });
+        return $('#nav li.research').css({
+          color: '#b1d8aa'
+        });
+      });
+      $('.social a').css({
+        background: '#deedcf'
+      });
+      $('.social a').mouseenter(function() {
+        return $(this).css({
+          background: '#b1d8aa'
+        });
+      });
+      $('.social a').mouseleave(function() {
+        return $(this).css({
+          background: '#deedcf'
+        });
+      });
+      return $('.link a').click(function(e) {
+        var url;
+        e.preventDefault();
+        url = $(e.currentTarget).data('url');
+        window.open(url);
+        return false;
       });
     };
 

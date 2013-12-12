@@ -1,8 +1,16 @@
 #nav
 	img.logo(src="images/logo.png")
+
 	ul._passion
-		li.film(data-url="/films") FILMS
-		li.research(data-url="/research") RESEARCH
-		li.contact(data-url="/contact") CONTACT
+		li.film(data-url="#{view.the.base_path}/films") FILMS
+		li.research(data-url="#{view.the.base_path}/research") RESEARCH
+		li.contact(data-url="#{view.the.base_path}/contact") CONTACT
+
+	.social
+		a(data-url="http://www.twitter.com/sausandchop", href="javascript:;")
+			img.twitter(src="#{view.the.base_path}/images/twitter.png")
+
+		a(data-url="http://www.sausandchop.tumblr.com", href="javascript:;")
+			img.tumblr(src="#{view.the.base_path}/images/tumblr.png")
 
 #container

@@ -6188,7 +6188,7 @@ var requirejs, require, define;
 
 require.config({
   baseUrl: '/js',
-  paths: {json:'vendors/json',history:'vendors/history',inflection:'vendors/inflection',jquery:'vendors/jquery',lodash:'vendors/lodash'}
+  paths: {json:'vendors/json',history:'vendors/history',inflection:'vendors/inflection',jquery:'vendors/jquery',lodash:'vendors/lodash',froogaloop:'vendors/froogaloop',fittext:'vendors/fittext'}
 });
 require( ['app/app'] );
 

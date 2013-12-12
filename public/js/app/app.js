@@ -14,7 +14,17 @@ define('app/app', ['require', 'exports', 'module', 'app/config/routes', 'app/con
     __extends(App, _super);
 
     function App(Settings, Routes) {
+      var mobile, tablet;
       App.__super__.constructor.call(this, Settings, Routes);
+      this.base_path = env.BASE_PATH;
+      tablet = /ipad|android|sch-i800|playbook|tablet|kindle|gt-p1000|sgh-t849|shw-m180s|a510|a511|a100|dell streak|silk/i.test(navigator.userAgent.toLowerCase());
+      mobile = /\bandroid\b.*\bmobile\b|\bmobile\b.*\bandroid\b|iphone|ipod|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase());
+      if (mobile) {
+        $('body').addClass('mobile');
+      }
+      if (tablet) {
+        $('body').addClass('tablet');
+      }
       this.start();
     }
 

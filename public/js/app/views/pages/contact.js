@@ -18,11 +18,38 @@ define('app/views/pages/contact', ['require', 'exports', 'module', 'styles/pages
     }
 
     Contact.prototype.after_render = function(data) {
+      var _this = this;
       $('#nav li').css({
         color: '#d9eeee'
       });
-      return $('#nav li.contact').css({
+      $('#nav li.contact').css({
         color: '#b6e1e0'
+      });
+      $('#nav ul li').mouseenter(function(e) {
+        return $(e.currentTarget).css({
+          color: '#b6e1e0'
+        });
+      });
+      $('#nav ul li').mouseleave(function(e) {
+        $('#nav li').css({
+          color: '#d9eeee'
+        });
+        return $('#nav li.contact').css({
+          color: '#b6e1e0'
+        });
+      });
+      $('.social a').css({
+        background: '#d9eeee'
+      });
+      $('.social a').mouseenter(function() {
+        return $(this).css({
+          background: '#b6e1e0'
+        });
+      });
+      return $('.social a').mouseleave(function() {
+        return $(this).css({
+          background: '#d9eeee'
+        });
       });
     };
 

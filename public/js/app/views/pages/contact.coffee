@@ -12,3 +12,18 @@ define ['require', 'exports', 'module'], (require, exports, module)->
 		
 				$('#nav li').css color: '#d9eeee'
 				$('#nav li.contact').css color: '#b6e1e0'
+		
+				$('#nav ul li').mouseenter ( e ) =>
+					$(e.currentTarget).css color: '#b6e1e0'
+		
+				$('#nav ul li').mouseleave ( e ) =>
+					$('#nav li').css color: '#d9eeee'
+					$('#nav li.contact').css color: '#b6e1e0'
+		
+				$('.social a').css background: '#d9eeee'
+		
+				$('.social a').mouseenter ->
+					$(@).css background: '#b6e1e0'
+		
+				$('.social a').mouseleave ->
+					$(@).css background: '#d9eeee'
