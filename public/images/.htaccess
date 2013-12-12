@@ -1,0 +1,11 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+DirectoryIndex index.php index.html
+
+# if its not a static resource
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# rewrite to index
+RewriteRule (.*) index.php?path=$1 [L]
