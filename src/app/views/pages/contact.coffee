@@ -22,3 +22,12 @@ module.exports = class Contact extends AppView
 
 		$('.social a').mouseleave ->
 			$(@).css background: '#d9eeee'
+
+	on_resize: =>
+
+		if $('body').hasClass 'desktop'
+
+			left = -( $('.wrapper').width() / 2 )  + ( $(window).width() / 2 )
+			top  = -( $('.wrapper').height() / 2 ) + ( $(window).height() / 2 )
+			
+			$('.wrapper').css left: left, top: top

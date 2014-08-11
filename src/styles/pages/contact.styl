@@ -1,15 +1,39 @@
 #contact
 	background: #d9eeee
+	min-width: 610px
 
 	.wrapper
-		absolute: top 32% left 22%
+		absolute: top 32% left 20%
 
 		a.link
 			text-transform : uppercase
 			color          : #b6e1e0
-			font-size      : 98px
-			line-height    : 85px
+			font-size      : 138px
+			line-height    : 120px
 			text-decoration: none
+
+	@media all and (max-width: 999px)
+		.wrapper
+			top: 30%
+			a.link
+				font-size: 98px
+				line-height: 85px
+
+	@media all and (max-width: 799px)
+		.wrapper
+			left: 16%
+			top: 28%
+			a.link
+				font-size: 77px
+				line-height: 65px
+
+	@media all and (max-width: 499px)
+		.wrapper
+			left: 12%
+			top: 26%
+			a.link
+				font-size: 55px
+				line-height: 48px
 
 
 body.mobile
@@ -17,6 +41,9 @@ body.mobile
 	#contact
 		.wrapper
 			absolute: top 220px left 80px
+
+			h1.title
+				font-weight: 300
 
 
 body.tablet

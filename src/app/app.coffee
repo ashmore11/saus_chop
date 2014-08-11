@@ -17,6 +17,8 @@ module.exports = class App extends Theoricus
     if mobile then $('body').addClass 'mobile'
     if tablet then $('body').addClass 'tablet'
 
+    if !mobile and !tablet then $('body').addClass 'desktop'
+
     @start()
 
 # initialize your app

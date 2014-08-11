@@ -30,3 +30,13 @@ module.exports = class Research extends AppView
 			window.open url
 
 			return off
+
+
+	on_resize: =>
+
+		if $('body').hasClass 'desktop'
+			
+			left = -( $('.wrapper').width() / 2 )  + ( $(window).width() / 2 )
+			top  = -( $('.wrapper').height() / 2 ) + ( $(window).height() / 2 )
+			
+			$('.wrapper').css left: left, top: top

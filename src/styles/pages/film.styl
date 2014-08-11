@@ -1,8 +1,11 @@
 #film
 	background: #e7e7e8
+	min-width: 610px
 
 	.player
-		absolute  : top left
+		position  : absolute
+		top: 0
+		left: 0
 		width     : 100%
 		height    : 100%
 		background: rgba(0,0,0,0.95)
@@ -11,36 +14,45 @@
 		z-index   : 9999
 
 		iframe
-			absolute   : top 50% left 50%
+			position: absolute
+			top: 50%
+			left: 50%
 			width      : 700px
 			height     : 393px
 			margin-left: -350px
 			margin-top : -196px
-			display    : none
+			// display    : none
 
 	.wrapper
-		absolute: top 13% left 22%
+		position: absolute
+		top: 100px
+		left: 16%
+		// max-width: 1200px
 
 		h1.title
 			text-transform: uppercase
 			color         : #bcbdc0
-			font-size     : 98px
-			line-height   : 85px
+			font-size     : 138px
+			line-height   : 120px
+			font-weight   : 300
 
 		ul.content
-			margin-top: 100px
+			margin-top: 60px
 
 			li.box
 				position      : relative
 				width         : 445px
 				height        : 295px
 				margin-right  : 15px
+				margin-bottom : 13px
 				display       : inline-block
 				background    : #bcbdc0
 				font-smoothing: antialiased
 
 				.overlay
-					absolute  : top left
+					position: absolute
+					top: 0
+					left: 0
 					width     : 100%
 					height    : 100%
 					background: #fff
@@ -50,7 +62,8 @@
 					transition-duration: 0.5s
 
 				p.title
-					absolute   : top 45%
+					position: absolute
+					top: 45%
 					width      : 100%
 					text-align : center
 					font-size  : 50px
@@ -65,12 +78,13 @@
 
 				.circle
 					border-radius: 999px
-					absolute     : top 50% left 50%
+					position: absolute
+					top: 50%
+					left: 50%
 					width        : 140px
 					height       : 140px
 					margin-left  : -70px
 					margin-top   : -70px
-					background   : #b0add4
 					opacity      : 0
 					z-index      : 3
 
@@ -99,6 +113,7 @@
 
 					.circle
 						opacity: 1
+						background: #b0add4
 
 						p.play
 							color: #d4d9ed
@@ -112,9 +127,104 @@
 			li.box.second
 				background: url('images/examine_thumb.png') center center
 				background-size: cover
+				cursor: pointer
+
+				&:hover
+					.overlay
+						background: #f1e3cd
+						opacity   : 1
+
+					p.title
+						opacity: 0
+
+					.circle
+						opacity: 1
+						background: #fde1b2
+
+						p.play
+							color: #bcbdc0
+
+				.circle p.play
+					color: #bcbdc0
 
 				p.title
 					color: #fde1b2
+
+			li.box.third
+				background: url('images/viviene_thumb.jpg') center center
+				background-size: cover
+				// cursor: pointer
+
+				// &:hover
+				// 	.overlay
+				// 		background: rgb(244,205,216)
+				// 		opacity   : 1
+
+				// 	p.title
+				// 		opacity: 0
+
+				// 	.circle
+				// 		opacity: 1
+				// 		background: #fde1b2
+
+				// 		p.play
+				// 			color: #bcbdc0
+
+				// .circle p.play
+				// 	color: #bcbdc0
+
+				p.title
+					color: rgb(244,205,216)
+
+	@media all and (max-width: 1650px), all and ( max-height: 1200px )
+
+		.wrapper
+			top: 100px
+			// max-width: 900px
+
+			h1.title
+				font-size     : 98px
+				line-height   : 85px
+
+			ul.content
+				margin-top: 60px
+
+				li.box
+					width         : 360px
+					height        : 250px
+
+	@media all and (max-width: 1200px), all and ( max-height: 1000px )
+
+		.wrapper
+			top: 100px
+			left: 14%
+			// max-width: 900px
+
+			h1.title
+				font-size     : 77px
+				line-height   : 65px
+
+			ul.content
+
+				li.box
+					width         : 300px
+					height        : 200px
+
+	@media all and (max-width: 900px), all and ( max-height: 800px )
+
+		.wrapper
+			top: 100px
+			left: 12%
+
+			h1.title
+				font-size     : 55px
+				line-height   : 48px
+
+			ul.content
+
+				li.box
+					width         : 250px
+					height        : 170px
 
 
 body.mobile
@@ -126,14 +236,21 @@ body.mobile
 			fixed: top left
 
 		.wrapper
-			absolute: top 220px left 0
+			position: absolute
+			top: 220px
+			left: 0
 			width   : 100%
 
 			h1.title
 				margin-left: 80px
+				font-weight: 300
 
 			ul.content
 				margin-top: 50px
+				
+				br
+					display: none
+				
 				li.box
 					width       : 83%
 					height      : 500px
@@ -154,7 +271,9 @@ body.tablet
 	#film
 
 		.wrapper
-			absolute: top 90px left 80px
+			position: absolute
+			top: 90px
+			left: 80px
 			width   : 100%
 
 			h1.title
